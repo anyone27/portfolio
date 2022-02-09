@@ -21,6 +21,7 @@
     color: var(--text-colour);
     width: 100vw;
     overflow: hidden;
+    align-items: center;
 }
 
 .dark-mode .App{
@@ -140,8 +141,7 @@ hr.rounded {
 
 .content {
     height: auto;
-    padding: 20px;
-    margin: 0 25%;
+    width: 50%;
     flex: 1 0 auto;
 }
 
@@ -200,6 +200,7 @@ h2 {
 
 a {
     text-decoration: none;
+    font-weight: 900;
 }
 
 a:visited {
@@ -292,6 +293,45 @@ a:visited {
     background-color: var(--dark-bg-colour);
 }
 
+.about-container {
+    display: flex;
+    justify-content: center;
+}
+
+.about-item {
+    margin: 20px 0;
+    padding: 10px;
+    width: 40%;
+    border: 1px var(--secondary-colour) solid;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-weight: 700;
+}
+
+.dark-mode .about-item {
+    border: 1px var(--dark-secondary-colour) solid;
+}
+
+.about-item ul {
+    margin: 0;
+    padding: 0;
+}
+
+.about-item li {
+    list-style-type: none;
+    line-height: 2.5;
+}
+
+.about-list {
+    padding: 10px;
+}
+
+.about-list li {
+    margin: 20px;
+}
+
 .not-found {
     text-align: center;
 }
@@ -314,27 +354,39 @@ a:visited {
     background-color: var(--dark-secondary-colour);
 }
 
-.dark-mode .github-light {
-    display: none;
+.fa-linkedin {
+    margin: 15px;
+    padding: 0;
+    font-size: 50px;
+    color: var(--text-colour);
 }
 
-.github {
-    padding: 0px 0px 5px 0px;
+.dark-mode .fa-linkedin {
+    color: var(--dark-text-colour);
 }
 
-.github-dark {
-    display: none;
+.fa-github-square {
+    margin: 15px;
+    padding: 0;
+    font-size: 50px;
+    color: var(--text-colour);
 }
 
-.dark-mode .github-dark {
-    display:inline-block;
+.dark-mode .fa-github-square {
+    color: var(--dark-text-colour);
 }
 
 .dark-mode .footer-copywrite {
     color: var(--dark-text-colour);
 }
 
-@media screen and (max-width: 768px) { 
+@media screen and (max-width: 1500px) {
+    .content {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 800px) { 
     .hide-links {
         display: none;
     }
@@ -347,6 +399,7 @@ a:visited {
     }
 
     .content {
+        width: 90%;
         padding: 5px;
         margin: 10px 10px 20px 10px;
         text-align: center;
@@ -377,5 +430,25 @@ a:visited {
 
     .project-title {
         text-align: center;
+    }
+
+    .about-container {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .about-item {
+        width: 80%;
+        margin: 0;
+    }
+    
+    .about-list li {
+        margin: 20px;
+    }
+
+    .about-list ul{
+        margin: 0;
+        padding: 0;
     }
 }
