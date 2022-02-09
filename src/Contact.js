@@ -29,7 +29,7 @@ const Contact = () => {
             return
         }
 
-        let response = await fetch("/send_email", {
+        let response = await fetch("https://joshcallarman.com/send_email/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json;charset=utf-8",
@@ -49,7 +49,7 @@ const Contact = () => {
     return (
         <div className="contact-page">
             <h1>Contact</h1>
-            <form id="contact-form" className="contact-form" method="POST" onSubmit={handleSubmit}>
+            <form id="contact-form" className="contact-form" onSubmit={handleSubmit}>
                 <div className="form-entries">
                     <label htmlFor='name'>Name</label>
                     <input className="contact-field" type="text" id="name" required/>
