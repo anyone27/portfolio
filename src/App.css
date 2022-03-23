@@ -1,454 +1,458 @@
 :root {
+	--bg-colour: rgb(255, 252, 246);
+	--secondary-colour: #9aaed1;
+	--text-colour: rgb(31, 28, 48);
+	--highlight-colour: rgb(116, 50, 170);
+	--hover-colour: rgba(0, 0, 100, 0.1);
 
-    --bg-colour: rgb(255, 252, 246);
-    --secondary-colour: #9aaed1;
-    --text-colour: rgb(31, 28, 48);
-    --highlight-colour: rgb(116, 50, 170);
-    --hover-colour: rgba(0, 0, 100, 0.1);
-
-    --dark-bg-colour: #3A405A;
-    --dark-secondary-colour: #6e8cc0;
-    --dark-text-colour: #F9DEC9;
-    --dark-highlight-colour: #E9AFA3;
-    --dark-hover-colour: rgba(200,200,255,0.1)
+	--dark-bg-colour: #3a405a;
+	--dark-secondary-colour: #6e8cc0;
+	--dark-text-colour: #f9dec9;
+	--dark-highlight-colour: #e9afa3;
+	--dark-hover-colour: rgba(200, 200, 255, 0.1);
 }
 
 .App {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: var(--bg-colour);
-    color: var(--text-colour);
-    width: 100vw;
-    overflow: hidden;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: var(--bg-colour);
+	color: var(--text-colour);
+	width: 100vw;
+	overflow: hidden;
+	align-items: center;
 }
 
-.dark-mode .App{
-    background-color: var(--dark-bg-colour);
-    color: var(--dark-text-colour);
+.dark-mode .App {
+	background-color: var(--dark-bg-colour);
+	color: var(--dark-text-colour);
 }
 
 .fa-moon {
-    color: rgb(233, 200, 118);
+	color: rgb(233, 200, 118);
 }
 
 .fa-sun {
-    color: rgb(255, 187, 60);
+	color: rgb(255, 187, 60);
 }
 
 .dark-mode .fa-moon {
-    color: rgb(253, 241, 209);
+	color: rgb(253, 241, 209);
 }
 
 .dark-mode .fa-sun {
-    color: rgb(235, 155, 36);
+	color: rgb(235, 155, 36);
 }
 
 .navbar {
-    text-align: center;
-    padding: 1.5rem;
-    font-size: 1.3rem;
-    background-color: var(--secondary-colour);
-    flex-shrink: 0;
-    width: 100vw;
+	text-align: center;
+	padding: 1.5rem;
+	font-size: 1.3rem;
+	background-color: var(--secondary-colour);
+	flex-shrink: 0;
+	width: 100vw;
 }
 
 .dark-mode .navbar {
-    background-color: var(--dark-secondary-colour)
+	background-color: var(--dark-secondary-colour);
 }
 
 .dark-mode .navbar a {
-    color: var(--dark-text-colour);
+	color: var(--dark-text-colour);
 }
 
 .navbar a {
-    margin: 0 5px;
-    padding: 3px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    color: var(--text-colour);
+	margin: 0 5px;
+	padding: 3px 20px;
+	text-decoration: none;
+	border-radius: 5px;
+	color: var(--text-colour);
 }
 
 .navbar a:hover {
-    background-color: var(--hover-colour);
+	background-color: var(--hover-colour);
 }
 
 .dark-mode .navbar a:hover {
-    background-color: var(--dark-hover-colour);
+	background-color: var(--dark-hover-colour);
 }
 
 .burger-menu {
-    display: none;
+	display: none;
 }
 
 .nav-right {
-    position: absolute;
-    top: 10px;
-    right: 30px;
+	position: absolute;
+	top: 10px;
+	right: 30px;
 }
 
 .dark-mode-button {
-    height: 60px;
-    width: 30px;
-    font-size: 9pt;
-    border-radius: 15px;
-    border: 2px solid var(--highlight-colour);
-    background-color: var(--bg-colour);
-    box-shadow: var(--highlight-colour) 1px 1px 5px 1px;
-    cursor: pointer;
-    padding: 2px;
+	height: 60px;
+	width: 30px;
+	font-size: 9pt;
+	border-radius: 15px;
+	border: 2px solid var(--highlight-colour);
+	background-color: var(--bg-colour);
+	box-shadow: var(--highlight-colour) 1px 1px 5px 1px;
+	cursor: pointer;
+	padding: 2px;
 }
 
 .dark-mode-button:hover {
-    background-color: var(--secondary-colour);
+	background-color: var(--secondary-colour);
 }
 
 #toggle-slash {
-    border: 1px solid var(--highlight-colour);
-    border-radius: 8px;
-    width: 75%;
+	border: 1px solid var(--highlight-colour);
+	border-radius: 8px;
+	width: 75%;
 }
 
 .dark-mode #toggle-slash {
-    border: 1px solid var(--dark-highlight-colour);
+	border: 1px solid var(--dark-highlight-colour);
 }
 
 .dark-mode .dark-mode-button {
-    background-color: var(--dark-bg-colour);
-    box-shadow: var(--dark-highlight-colour) 1px 1px 5px;
-    color: var(--dark-text-colour);
+	background-color: var(--dark-bg-colour);
+	box-shadow: var(--dark-highlight-colour) 1px 1px 5px;
+	color: var(--dark-text-colour);
 }
 
 .dark-mode .dark-mode-button:hover {
-    background-color: var(--dark-secondary-colour);
+	background-color: var(--dark-secondary-colour);
 }
 
 .logo {
-    font-size: 20pt;
-    font-weight: 500;
+	font-size: 20pt;
+	font-weight: 500;
 }
 
 hr.rounded {
-    border: 2px solid var(--highlight-colour);
-    border-radius: 8px;
-    width: 25%;
+	border: 2px solid var(--highlight-colour);
+	border-radius: 8px;
+	width: 25%;
 }
 
 .dark-mode hr.rounded {
-    border: 2px solid var(--dark-highlight-colour);
+	border: 2px solid var(--dark-highlight-colour);
 }
 
 .content {
-    height: auto;
-    width: 50%;
-    flex: 1 0 auto;
+	height: auto;
+	width: 50%;
+	flex: 1 0 auto;
 }
 
 h1 {
-    margin-bottom: 50px;
-    text-align: center;
-    text-decoration: var(--highlight-colour) double underline 2px;
-    
+	margin-bottom: 50px;
+	text-align: center;
+	text-decoration: var(--highlight-colour) double underline 2px;
 }
 
 .dark-mode h1 {
-    text-decoration: var(--dark-highlight-colour) double underline 2px;
+	text-decoration: var(--dark-highlight-colour) double underline 2px;
 }
 
 h2 {
-    text-decoration: var(--highlight-colour) underline 2px;   
+	text-decoration: var(--highlight-colour) underline 2px;
 }
 
 .dark-mode h2 {
-    text-decoration: var(--dark-highlight-colour) underline 2px; 
+	text-decoration: var(--dark-highlight-colour) underline 2px;
 }
 
 .projects {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border: 2px solid var(--secondary-colour);
-    border-radius: 10px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	border: 2px solid var(--secondary-colour);
+	border-radius: 10px;
+	margin-bottom: 20px;
+	height: auto;
 }
 
 .projects:hover {
-    background-color: var(--hover-colour);
-    filter: brightness(90%);
+	background-color: var(--hover-colour);
+	filter: brightness(90%);
 }
 
 .dark-mode .projects:hover {
-    background-color: var(--dark-hover-colour);
+	background-color: var(--dark-hover-colour);
 }
 
-.project-image{
-    border-right: 2px solid var(--secondary-colour);
-    height: 207px;
-    width: 300px;
-    overflow: hidden;
-    border-radius: 10px 0px 0px 10px;
+.project-image {
+	border-right: 2px solid var(--secondary-colour);
+	width: 25%;
+	/* height: 1080px; */
+	overflow: hidden;
+	border-radius: 10px 0px 0px 10px;
 }
 
 .project-image img {
-    width: 100%;
-    height: 100%;
+	width: 100%;
+	/* height: 100%; */
 }
 
 .project-desc {
-    margin: 15px 15px 15px 25px;
+	width: 75%;
+	height: auto;
+	margin: 10px 15px 10px 20px;
 }
 
 a {
-    text-decoration: none;
-    font-weight: 900;
+	text-decoration: none;
+	font-weight: 900;
 }
 
 a:visited {
-    color: var(--text-colour);
+	color: var(--text-colour);
 }
 
 .dark-mode a:visited {
-    color: var(--dark-text-colour);
+	color: var(--dark-text-colour);
 }
 
 .fas {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 .about a {
-    text-decoration: underline var(--highlight-colour) 1px;
-    color: var(--text-colour);
+	text-decoration: underline var(--highlight-colour) 1px;
+	color: var(--text-colour);
 }
 
-
 .dark-mode .about a {
-    text-decoration: underline var(--dark-highlight-colour) 1px;
-    color: var(--dark-text-colour);
+	text-decoration: underline var(--dark-highlight-colour) 1px;
+	color: var(--dark-text-colour);
 }
 
 .about-header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .about {
-    border: 1px var(--secondary-colour) solid;
-    border-radius: 5px;;
-    margin: 10px;
-    padding: 5px 25px;
+	border: 1px var(--secondary-colour) solid;
+	border-radius: 5px;
+	margin: 10px;
+	padding: 5px 25px;
 }
 
 .dark-mode .about {
-    border: 1px var(--dark-secondary-colour) solid;
+	border: 1px var(--dark-secondary-colour) solid;
 }
 
 .about:hover {
-    background-color: var(--hover-colour);
+	background-color: var(--hover-colour);
 }
 
 .dark-mode .about:hover {
-    background-color: var(--dark-hover-colour);
+	background-color: var(--dark-hover-colour);
 }
 
 .form-entries {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .contact-field {
-    border-radius: 5px;
-    background-color: var(--secondary-colour);
-    border: 1px solid var(--highlight-colour);
-    margin: 5px;
-    padding: 8px;
+	border-radius: 5px;
+	background-color: var(--secondary-colour);
+	border: 1px solid var(--highlight-colour);
+	margin: 5px;
+	padding: 8px;
 }
 
 .dark-mode .contact-field {
-    background-color: var(--dark-secondary-colour);
-    border: 1px solid var(--dark-highlight-colour);
+	background-color: var(--dark-secondary-colour);
+	border: 1px solid var(--dark-highlight-colour);
 }
 
 #contact-submit {
-    cursor: pointer;
-    padding: 8px 10px;
-    border-radius: 5px;
-    color: var(--text-colour);
-    background-color: var(--secondary-colour);
-    border: 1px solid var(--highlight-colour);
+	cursor: pointer;
+	padding: 8px 10px;
+	border-radius: 5px;
+	color: var(--text-colour);
+	background-color: var(--secondary-colour);
+	border: 1px solid var(--highlight-colour);
 }
 
 #contact-submit:hover {
-    background-color: var(--bg-colour);
+	background-color: var(--bg-colour);
 }
 
 .dark-mode #contact-submit {
-    background-color: var(--dark-secondary-colour);
-    border: 1px solid var(--dark-highlight-colour);
-    color: var(--dark-text-colour);
+	background-color: var(--dark-secondary-colour);
+	border: 1px solid var(--dark-highlight-colour);
+	color: var(--dark-text-colour);
 }
 
 .dark-mode #contact-submit:hover {
-    background-color: var(--dark-bg-colour);
+	background-color: var(--dark-bg-colour);
 }
 
 .about-container {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 .about-item {
-    margin: 20px 0;
-    padding: 10px;
-    width: 40%;
-    border: 1px var(--secondary-colour) solid;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    font-weight: 700;
+	margin: 20px 0;
+	padding: 10px;
+	width: 40%;
+	border: 1px var(--secondary-colour) solid;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	font-weight: 700;
 }
 
 .dark-mode .about-item {
-    border: 1px var(--dark-secondary-colour) solid;
+	border: 1px var(--dark-secondary-colour) solid;
 }
 
 .about-item ul {
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 .about-item li {
-    list-style-type: none;
-    line-height: 2.5;
+	list-style-type: none;
+	line-height: 2.5;
 }
 
 .about-list {
-    padding: 10px;
+	padding: 10px;
 }
 
 .about-list li {
-    margin: 20px;
+	margin: 20px;
 }
 
 .not-found {
-    text-align: center;
+	text-align: center;
 }
 
 .footer {
-    padding: 10px 5px;
-    text-align: center;
-    bottom: 0;
-    width: 100vw;
-    height: 100%;
-    background-color: var(--secondary-colour);
-    flex-shrink: 0;
+	padding: 10px 5px;
+	text-align: center;
+	bottom: 0;
+	width: 100vw;
+	height: 100%;
+	background-color: var(--secondary-colour);
+	flex-shrink: 0;
 }
 
 .footer-copywrite {
-    color: var(--text-colour);
+	color: var(--text-colour);
 }
 
 .dark-mode .footer {
-    background-color: var(--dark-secondary-colour);
+	background-color: var(--dark-secondary-colour);
 }
 
 .fa-linkedin {
-    margin: 15px;
-    padding: 0;
-    font-size: 50px;
-    color: var(--text-colour);
+	margin: 15px;
+	padding: 0;
+	font-size: 50px;
+	color: var(--text-colour);
 }
 
 .dark-mode .fa-linkedin {
-    color: var(--dark-text-colour);
+	color: var(--dark-text-colour);
 }
 
 .fa-github-square {
-    margin: 15px;
-    padding: 0;
-    font-size: 50px;
-    color: var(--text-colour);
+	margin: 15px;
+	padding: 0;
+	font-size: 50px;
+	color: var(--text-colour);
 }
 
 .dark-mode .fa-github-square {
-    color: var(--dark-text-colour);
+	color: var(--dark-text-colour);
 }
 
 .dark-mode .footer-copywrite {
-    color: var(--dark-text-colour);
+	color: var(--dark-text-colour);
 }
 
 @media screen and (max-width: 1500px) {
-    .content {
-        width: 70%;
-    }
+	.content {
+		width: 70%;
+	}
 }
 
-@media screen and (max-width: 800px) { 
-    .hide-links {
-        display: none;
-    }
+@media screen and (max-width: 800px) {
+	.hide-links {
+		display: none;
+	}
 
-    .burger-menu {
-        position: absolute;
-        top: 25px;
-        left: 30px;
-        display: block;
-    }
+	.burger-menu {
+		position: absolute;
+		top: 25px;
+		left: 30px;
+		display: block;
+	}
 
-    .content {
-        width: 90%;
-        padding: 5px;
-        margin: 10px 10px 20px 10px;
-        text-align: center;
-    }
+	.content {
+		width: 90%;
+		padding: 5px;
+		margin: 10px 10px 20px 10px;
+		text-align: center;
+	}
 
-    hr.rounded {
-        width: 65%;
-    }
+	hr.rounded {
+		width: 65%;
+	}
 
-    .nav-main {
-        margin: 0 40px 0 0;
-    }
+	.nav-main {
+		margin: 0 40px 0 0;
+	}
 
-    .projects {
-        flex-direction: column;
-        margin: auto;
-        text-align: center;
-        width: 300px;
-    }
+	.projects {
+		flex-direction: column;
+		margin: auto;
+		margin-bottom: 20px;
+		text-align: center;
+		width: 100%;
+		height: auto;
+	}
 
-    .project-image {
-        border-right: none;
-        border-bottom: 2px solid var(--secondary-colour);
-        /* width: 100%; */
-        text-align: center;
-        border-radius: 10px 10px 0px 0px;
-    }
+	.project-image {
+		border-right: none;
+		border-bottom: 2px solid var(--secondary-colour);
+		width: 100%;
+		height: auto;
+		text-align: center;
+		border-radius: 10px 10px 0px 0px;
+	}
 
-    .project-title {
-        text-align: center;
-    }
+	.project-title {
+		text-align: center;
+	}
 
-    .about-container {
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-    }
+	.about-container {
+		flex-direction: column;
+		width: 100%;
+		align-items: center;
+	}
 
-    .about-item {
-        width: 80%;
-        margin: 0;
-    }
-    
-    .about-list li {
-        margin: 20px;
-    }
+	.about-item {
+		width: 80%;
+		margin: 0;
+	}
 
-    .about-list ul{
-        margin: 0;
-        padding: 0;
-    }
+	.about-list li {
+		margin: 20px;
+	}
+
+	.about-list ul {
+		margin: 0;
+		padding: 0;
+	}
 }

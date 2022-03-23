@@ -5,31 +5,29 @@ import Footer from './Footer.js';
 import Home from './Home.js';
 import About from './About.js';
 import Contact from './Contact.js';
-import NotFound from './NotFound.js';
+// import NotFound from './NotFound.js';
 
 function App() {
+	return (
+		<Router>
+			<div className="App">
+				<Navbar />
+				<div className="content">
+					<Routes>
+						<Route exact path="/" element={<Home />} />
+						<Route path="/about" element={<About />} />
+						<Route path="/contact" element={<Contact />} />
+						<Route path="/send_email" />
+						{/* <Route path="*" element={<NotFound />} /> */}
+					</Routes>
+				</div>
 
-  return (
-      <Router>
-        <div className="App">
-          <Navbar />
-          <div className="content">
-            <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/send_email" />
-              {/* <Route path="*" element={<NotFound />} /> */}
-            </Routes>
-          </div>
-
-          <div className="footer">
-          <Footer />
-          </div>
-
-        </div>
-      </Router>
-  );
+				<div className="footer">
+					<Footer />
+				</div>
+			</div>
+		</Router>
+	);
 }
 
 export default App;
